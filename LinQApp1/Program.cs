@@ -85,22 +85,25 @@ namespace LinQApp1
             //} 
             #endregion
 
-            7) Print each product's name along with its position (1-based) in the list.
+            #region Question07
+            //7) Print each product's name along with its position (1-based) in the list.
 
-            var result = ProductList.Select((p, index) => new
-            {
-             Index = index + 1,
-             Name = p.ProductName
-            });
+            //var result = ProductList.Select((p, index) => new
+            //{
+            // Index = index + 1,
+            // Name = p.ProductName
+            //});
 
-            foreach (var item in result)
-            {
-                Console.WriteLine(item.Index + ". " + item.Name);
-            }
+            //foreach (var item in result)
+            //{
+            //    Console.WriteLine(item.Index + ". " + item.Name);
+            //}
+
+            #endregion
             8) Sort ProductList by Category ascending, then within each category sort by UnitPrice descending.
-var result = ProductList
-    .OrderBy(p => p.Category)
-    .ThenByDescending(p => p.UnitPrice);
+            var result = ProductList
+                .OrderBy(p => p.Category)
+                .ThenByDescending(p => p.UnitPrice);
 
             foreach (var item in result)
             {
