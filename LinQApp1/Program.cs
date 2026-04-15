@@ -100,73 +100,97 @@ namespace LinQApp1
             //}
 
             #endregion
-            8) Sort ProductList by Category ascending, then within each category sort by UnitPrice descending.
-            var result = ProductList
-                .OrderBy(p => p.Category)
-                .ThenByDescending(p => p.UnitPrice);
 
-            foreach (var item in result)
-            {
-                Console.WriteLine(item.Category + " - " + item.ProductName + " - " + item.UnitPrice);
-            }
-            9) Get all products from the "Beverages" category, sorted by UnitsInStock descending. Print name and stock.
-var result = ProductList
-    .Where(p => p.Category == "Beverages")
-    .OrderByDescending(p => p.UnitsInStock);
+            #region Question08
+            //8) Sort ProductList by Category ascending, then within each category sort by UnitPrice descending.
 
-            foreach (var item in result)
-            {
-                Console.WriteLine(item.ProductName + " - " + item.UnitsInStock);
-            }
-            10) Using QUERY SYNTAX with a compound from clause, list all orders placed in 1997 or later showing CustomerID and OrderDate.
-var result = from c in CustomerList
-             from o in c.Orders
-             where o.OrderDate.Year >= 1997
-             select new
-             {
-                 c.CustomerID,
-                 o.OrderDate
-             };
+            //var result = ProductList
+            //    .OrderBy(p => p.Category)
+            //    .ThenByDescending(p => p.UnitPrice);
 
-            foreach (var item in result)
-            {
-                Console.WriteLine(item.CustomerID + " - " + item.OrderDate);
-            }
-            11) Show position number alongside ProductName.
-            var result = ProductList.Select((p, index) => new
-            {
-                Position = index + 1,
-                ProductName = p.ProductName
-            });
+            //foreach (var item in result)
+            //{
+            //    Console.WriteLine(item.Category + " - " + item.ProductName + " - " + item.UnitPrice);
+            //} 
+            #endregion
 
-            foreach (var item in result)
-            {
-                Console.WriteLine(item.Position + ". " + item.ProductName);
-            }
-            12) Sort first by word length and then by a case -insensitive sort of the words in an array.
-string[] Arr = { "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" };
+            #region Question09
+            //9) Get all products from the "Beverages" category, sorted by UnitsInStock descending. Print name and stock.
 
-                var result = Arr
-                    .OrderBy(w => w.Length)
-                    .ThenBy(w => w, StringComparer.OrdinalIgnoreCase);
+            //var result = ProductList
+            //    .Where(p => p.Category == "Beverages")
+            //    .OrderByDescending(p => p.UnitsInStock);
 
-                foreach (var item in result)
-                {
-                    Console.WriteLine(item);
-                }
-                13) Create a list of all digits in the array whose second letter is 'i' that is reversed from the order in the original array.
-            string[] digits = { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
+            //foreach (var item in result)
+            //{
+            //    Console.WriteLine(item.ProductName + " - " + item.UnitsInStock);
+            //} 
+            #endregion
 
-                var result = digits
-                    .Where(d => d[1] == 'i')
-                    .Reverse();
+            #region Question10
+            //10) Using QUERY SYNTAX with a compound from clause, list all orders placed in 1997 or later showing CustomerID and OrderDate.
 
-                foreach (var item in result)
-                {
-                    Console.WriteLine(item);
-                }
+            //var result = from c in CustomerList
+            // from o in c.Orders
+            // where o.OrderDate.Year >= 1997
+            // select new
+            // {
+            //     c.CustomerID,
+            //     o.OrderDate
+            // };
+
+            //foreach (var item in result)
+            //{
+            //    Console.WriteLine(item.CustomerID + " - " + item.OrderDate);
+            //} 
+            #endregion
+
+            #region Question11
+            //11) Show position number alongside ProductName.
+
+            //var result = ProductList.Select((p, index) => new
+            //{
+            //    Position = index + 1,
+            //    ProductName = p.ProductName
+            //});
+
+            //foreach (var item in result)
+            //{
+            //    Console.WriteLine(item.Position + ". " + item.ProductName);
+            //} 
+            #endregion
+
+            #region Question12
+            //12) Sort first by word length and then by a case -insensitive sort of the words in an array.
+
+            //string[] Arr = { "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" };
+
+            //var result = Arr
+            //    .OrderBy(w => w.Length)
+            //    .ThenBy(w => w, StringComparer.OrdinalIgnoreCase);
+
+            //foreach (var item in result)
+            //{
+            //    Console.WriteLine(item);
+            //} 
+            #endregion
 
 
-            }
+            #region Question13
+            //13) Create a list of all digits in the array whose second letter is 'i' that is reversed from the order in the original array.
+            //string[] digits = { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
+
+            //var result = digits
+            //    .Where(d => d[1] == 'i')
+            //    .Reverse();
+
+            //foreach (var item in result)
+            //{
+            //    Console.WriteLine(item);
+            //} 
+            #endregion
+
+
+        }
     }
 }
