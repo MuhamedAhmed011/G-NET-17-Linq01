@@ -69,24 +69,29 @@ namespace LinQApp1
             //} 
             #endregion
 
-            6) Create a new anonymous type with Name, Price, and StockStatus. Print the result.
-            var result = ProductList.Select(p => new
-            {
-                Name = p.ProductName,
-                Price = p.UnitPrice,
-                StockStatus = p.UnitsInStock > 0 ? "Available" : "Out of Stock"
-            });
+            #region Question06
+            //6) Create a new anonymous type with Name, Price, and StockStatus. Print the result.
 
-            foreach (var item in result)
-            {
-                Console.WriteLine(item.Name + " - " + item.Price + " - " + item.StockStatus);
-            }
+            //    var result = ProductList.Select(p => new
+            //    {
+            //        Name = p.ProductName,
+            //        Price = p.UnitPrice,
+            //        StockStatus = p.UnitsInStock > 0 ? "Available" : "Out of Stock"
+            //    });
+
+            //foreach (var item in result)
+            //{
+            //    Console.WriteLine(item.Name + " - " + item.Price + " - " + item.StockStatus);
+            //} 
+            #endregion
+
             7) Print each product's name along with its position (1-based) in the list.
-var result = ProductList.Select((p, index) => new
-{
-    Index = index + 1,
-    Name = p.ProductName
-});
+
+            var result = ProductList.Select((p, index) => new
+            {
+             Index = index + 1,
+             Name = p.ProductName
+            });
 
             foreach (var item in result)
             {
