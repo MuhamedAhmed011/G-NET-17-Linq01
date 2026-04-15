@@ -1,4 +1,7 @@
-﻿namespace LinQApp1
+﻿using System.Collections.Generic;
+using System.Xml.Linq;
+
+namespace LinQApp1
 {
     internal class Program
     {
@@ -12,6 +15,17 @@
             //foreach (var item in result)
             //{
             //    Console.WriteLine(item.ProductName + " - " + item.UnitPrice);
+            //} 
+            #endregion
+
+            #region Question02
+            //2) Get a list of only the product names from ProductList.Print each name.
+
+            //var result = ProductList.Select(p => p.ProductName);
+
+            //foreach (var item in result)
+            //{
+            //    Console.WriteLine(item);
             //} 
             #endregion
 
