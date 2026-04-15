@@ -114,7 +114,7 @@ namespace LinQApp1
             //} 
             #endregion
 
-            #region Question09
+            #region Question09 
             //9) Get all products from the "Beverages" category, sorted by UnitsInStock descending. Print name and stock.
 
             //var result = ProductList
